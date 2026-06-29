@@ -9,8 +9,9 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-$recipient = 'help@greenscapelawn.example';
+$recipient = 'help@greenscapelawncareconnect.com';
 $siteName = 'GreenScape Lawn Care Connect';
+$siteDomain = 'greenscapelawncareconnect.com';
 $configPath = __DIR__ . '/js/site-config.js';
 
 if (is_readable($configPath)) {
@@ -20,6 +21,9 @@ if (is_readable($configPath)) {
     }
     if (preg_match('/companyName:\s*"([^"]+)"/', $configSource, $match)) {
         $siteName = str_replace(["\r", "\n"], ' ', $match[1]);
+    }
+    if (preg_match('/website:\s*"([^"]+)"/', $configSource, $match)) {
+        $siteDomain = preg_replace('/^www\./i', '', trim($match[1]));
     }
 }
 
@@ -64,8 +68,8 @@ $body = implode("\n", [
     'IP: ' . ($_SERVER['REMOTE_ADDR'] ?? 'Unknown')
 ]);
 
-$host = preg_replace('/[^a-z0-9.-]/i', '', (string)($_SERVER['HTTP_HOST'] ?? 'localhost'));
-$host = explode(':', $host)[0] ?: 'localhost';
+$host = preg_replace('/[^a-z0-9.-]/i', '', (string)($_SERVER['HTTP_HOST'] ?? $siteDomain));
+$host = explode(':', $host)[0] ?: $siteDomain;
 
 $headers = [
     'From: ' . $siteName . ' <no-reply@' . $host . '>',

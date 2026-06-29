@@ -1,5 +1,7 @@
 (function () {
   const config = window.siteConfig || {};
+  const defaultCompanyName = "GreenScape Lawn Care Connect";
+  const rootPathPrefix = window.location.pathname.includes("/services/") ? "../" : "";
 
   const setText = (selector, value) => {
     document.querySelectorAll(selector).forEach((el) => {
@@ -15,6 +17,7 @@
 
   setText("[data-company]", config.companyName);
   setText("[data-brand]", config.brandShort || config.companyName);
+  setText(".brand-subtitle", config.brandSubtitle || "Complete Lawn Care");
   setText("[data-email]", config.email);
   setText("[data-website]", config.website);
   setText("[data-phone]", config.phone);
@@ -29,9 +32,16 @@
   setHref("a[data-email-href]", `mailto:${config.email}`);
   setHref("a[data-phone-href]", `tel:${config.phoneHref}`);
 
+  if (config.companyName && config.companyName !== defaultCompanyName) {
+    document.title = document.title.replaceAll(defaultCompanyName, config.companyName);
+    document.querySelectorAll('meta[name="description"]').forEach((meta) => {
+      meta.setAttribute("content", meta.getAttribute("content").replaceAll(defaultCompanyName, config.companyName));
+    });
+  }
+
   const floatingAction = document.createElement("a");
   floatingAction.className = "floating-action";
-  floatingAction.href = config.phoneHref ? `tel:${config.phoneHref}` : "contact.html";
+  floatingAction.href = config.phoneHref ? `tel:${config.phoneHref}` : `${rootPathPrefix}contact.html`;
   floatingAction.setAttribute("aria-label", config.phoneLabel || "Call");
   floatingAction.innerHTML = `
     <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
@@ -77,9 +87,7 @@
   const setCookiePreference = (value) => {
     try {
       window.localStorage.setItem(cookieStorageKey, JSON.stringify(value));
-    } catch (error) {
-      // If storage is unavailable, closing the banner for this session is still useful.
-    }
+    } catch (error) {}
   };
 
   if (!getCookiePreference()) {
@@ -97,8 +105,8 @@
           <label><input type="checkbox" data-cookie-option="marketing"> Advertising and lead attribution</label>
         </div>
         <div class="cookie-links">
-          <a href="cookie-policy.html">Cookie Policy</a>
-          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="${rootPathPrefix}cookie-policy.html">Cookie Policy</a>
+          <a href="${rootPathPrefix}privacy-policy.html">Privacy Policy</a>
         </div>
       </div>
       <div class="cookie-actions">
@@ -271,7 +279,7 @@
       <p id="confirmation-text">${config.formSuccess || `Thank you. ${config.companyName || "Our team"} will contact you soon.`}</p>
       <p class="confirmation-note">This website helps connect homeowners with independent local providers. Please verify licensing, insurance, scope, and pricing directly before hiring.</p>
       <div class="confirmation-actions">
-        <a class="btn" href="${config.phoneHref ? `tel:${config.phoneHref}` : "contact.html"}">Call Now</a>
+        <a class="btn" href="${config.phoneHref ? `tel:${config.phoneHref}` : `${rootPathPrefix}contact.html`}">Call Now</a>
         <button class="btn btn-outline" type="button" data-modal-close>Back to page</button>
       </div>
     </section>
