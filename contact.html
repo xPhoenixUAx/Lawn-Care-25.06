@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Lawn Care Team | GreenScape Complete Lawn Care</title>
-  <meta name="description" content="Contact GreenScape Complete Lawn Care for lawn maintenance, landscaping, irrigation support, cleanup, fertilization, shrub care, and sod repair.">
+  <title>Request Lawn Care Provider Match | GreenScape Lawn Care Connect</title>
+  <meta name="description" content="Contact GreenScape Lawn Care Connect to request help finding independent local providers for lawn maintenance, landscaping, irrigation support, cleanup, fertilization, shrub care, and sod repair.">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@700;800&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css"><script src="js/site-config.js" defer></script><script src="js/main.js" defer></script>
@@ -23,16 +23,27 @@
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="services.html">Services</a>
+        <div class="nav-dropdown">
+          <a class="nav-drop-trigger" href="services.html">Services <span aria-hidden="true">+</span></a>
+          <div class="nav-dropdown-menu">
+            <a href="services/lawn-maintenance.html">Lawn Maintenance</a>
+            <a href="services/fertilization-weed-control.html">Fertilization & Weed Control</a>
+            <a href="services/seasonal-cleanups.html">Seasonal Cleanups</a>
+            <a href="services/sod-repair.html">Sod Repair & Lawn Recovery</a>
+            <a href="services/landscape-installation.html">Landscape Installation</a>
+            <a href="services/tree-shrub-care.html">Tree & Shrub Care</a>
+            <a href="services/irrigation-support.html">Irrigation Support</a>
+          </div>
+        </div>
         <a class="active" href="contact.html">Contact</a>
       </nav>
       <a class="btn nav-cta anim-push" href="contact.html"><svg class="header-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a2 2 0 0 1-2.06 0L2 7"/></svg>Get Started</a>
     </div>
   </header>
   <main>
-    <section class="page-hero" style="--page-image:url('assets/images/section-contact-arrival.webp')"><div class="section-inner" data-reveal="down"><span class="eyebrow">Contact</span><h1>Tell us what your yard needs next.</h1><p>Request a quote for recurring maintenance, seasonal cleanup, turf repair, landscape upgrades, or a complete service plan.</p></div></section>
-    <section class="section section-soft"><div class="section-inner contact-grid"><aside class="contact-card" data-reveal><h3>Service contact</h3><p><strong data-phone-label></strong></p><p><a data-phone-href data-phone></a></p><p><a data-email-href data-email></a></p><p><a data-website-href data-website></a></p><p data-address></p><p data-hours></p></aside><form class="form-card" data-contact-form data-reveal="down"><div class="form-grid"><div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div><div class="field"><label for="phone">Phone</label><input id="phone" name="phone" autocomplete="tel" required></div><div class="field"><label for="email">Email</label><input id="email" type="email" name="email" autocomplete="email"></div><div class="field"><label for="service">Service needed</label><select id="service" name="service"><option>Lawn maintenance</option><option>Landscape installation</option><option>Irrigation support</option><option>Seasonal cleanup</option><option>Fertilization and weed control</option><option>Tree and shrub care</option><option>Sod repair</option></select></div><div class="field field-full"><label for="message">Property details</label><textarea id="message" name="message"></textarea></div></div><button class="btn anim-push" type="submit">Send Request</button><p class="success-message" hidden></p></form></div></section>
+    <section class="page-hero" style="--page-image:url('assets/images/section-contact-arrival.webp')"><div class="section-inner" data-reveal="down"><span class="eyebrow">Contact</span><h1>Tell us what kind of local provider you need.</h1><p>Submit a free request for help connecting with independent providers for recurring maintenance, seasonal cleanup, turf repair, landscape upgrades, or other yard needs.</p></div></section>
+    <section class="section section-soft"><div class="section-inner contact-grid"><aside class="contact-card" data-reveal><h3>Connection support</h3><p><strong data-phone-label></strong></p><p><a data-phone-href data-phone></a></p><p><a data-email-href data-email></a></p><p><a data-website-href data-website></a></p><p data-address></p><p data-hours></p></aside><form class="form-card" data-contact-form data-reveal="down"><div class="form-grid"><div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div><div class="field"><label for="phone">Phone</label><input id="phone" name="phone" autocomplete="tel" required></div><div class="field"><label for="email">Email</label><input id="email" type="email" name="email" autocomplete="email"></div><div class="field"><label for="service">Provider needed for</label><select id="service" name="service"><option>Lawn maintenance</option><option>Landscape installation</option><option>Irrigation support</option><option>Seasonal cleanup</option><option>Fertilization and weed control</option><option>Tree and shrub care</option><option>Sod repair</option></select></div><div class="field field-full"><label for="message">Property details</label><textarea id="message" name="message" placeholder="Describe the service, timing, property access, and any urgent concerns."></textarea></div></div><button class="btn anim-push" type="submit">Request Connection</button><p class="success-message" hidden></p></form></div></section>
   </main>
-  <footer class="site-footer"><div class="footer-inner"><div><h3 data-company></h3><p data-footer-text></p><p data-company-line></p></div><div><h4>Services</h4><nav class="footer-links"><a href="services.html">All Services</a><a href="services/seasonal-cleanups.html">Cleanups</a><a href="services/sod-repair.html">Sod Repair</a></nav></div><div><h4>Legal</h4><nav class="footer-links"><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms & Conditions</a><a href="cookie-policy.html">Cookie Policy</a></nav></div><div><h4>Contact</h4><p><a data-phone-href data-phone></a></p><p><a data-email-href data-email></a></p></div></div><div class="footer-bottom"><div class="footer-inner"><span data-copyright></span><span data-address></span></div></div></footer>
+  <footer class="site-footer"><div class="footer-inner"><div><h3 data-company></h3><p data-footer-text></p><p data-company-line></p></div><div><h4>Services</h4><nav class="footer-links"><a href="services.html">All Services</a><a href="services/seasonal-cleanups.html">Cleanups</a><a href="services/sod-repair.html">Sod Repair</a></nav></div><div><h4>Legal</h4><nav class="footer-links"><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms & Conditions</a><a href="cookie-policy.html">Cookie Policy</a></nav></div><div><h4>Contact</h4><p><a data-phone-href data-phone></a></p><p><a data-email-href data-email></a></p></div></div><div class="footer-disclaimer"><p data-disclaimer>Disclaimer: This site is a free service to assist homeowners in connecting with local service providers. All contractors/providers are independent and this site does not warrant or guarantee any work performed. It is the responsibility of the homeowner to verify that the hired contractor furnishes the necessary license and insurance required for the work being performed. All persons depicted in a photo or video are actors or models and not contractors listed on this site.</p></div><div class="footer-bottom"><div class="footer-inner"><span data-copyright></span><span data-address></span></div></div></footer>
 </body>
 </html>

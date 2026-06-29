@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lawn Care Services | GreenScape Complete Lawn Care</title>
-  <meta name="description" content="Explore complete lawn care services: mowing, landscaping, irrigation, seasonal cleanup, fertilization, shrub care, and sod repair.">
+  <title>Lawn Care Provider Categories | GreenScape Lawn Care Connect</title>
+  <meta name="description" content="Explore lawn care provider categories for mowing, landscaping, irrigation support, seasonal cleanup, fertilization, shrub care, and sod repair.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@700;800&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/site-config.js" defer></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
 <body>  <div class="topbar">
@@ -26,44 +27,202 @@
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a class="active" href="services.html">Services</a>
+        <div class="nav-dropdown">
+          <a class="nav-drop-trigger active" href="services.html">Services <span aria-hidden="true">+</span></a>
+          <div class="nav-dropdown-menu">
+            <a href="services.html">All Services</a>
+            <a href="services/lawn-maintenance.html">Lawn Maintenance</a>
+            <a href="services/fertilization-weed-control.html">Fertilization & Weed Control</a>
+            <a href="services/seasonal-cleanups.html">Seasonal Cleanups</a>
+            <a href="services/sod-repair.html">Sod Repair & Lawn Recovery</a>
+            <a href="services/landscape-installation.html">Landscape Installation</a>
+            <a href="services/tree-shrub-care.html">Tree & Shrub Care</a>
+            <a href="services/irrigation-support.html">Irrigation Support</a>
+          </div>
+        </div>
         <a href="contact.html">Contact</a>
       </nav>
       <a class="btn nav-cta anim-push" href="contact.html"><svg class="header-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a2 2 0 0 1-2.06 0L2 7"/></svg>Get Started</a>
     </div>
   </header>
   <main>
-    <section class="page-hero" style="--page-image:url('assets/images/service-landscape-installation.webp')">
+    <section class="page-hero services-page-hero">
       <div class="section-inner" data-reveal="down">
-        <span class="eyebrow">Services</span>
-        <h1>Full-cycle lawn care services for every part of your yard.</h1>
-        <p>Choose one service or build a complete plan that keeps turf, beds, shrubs, watering, and seasonal cleanup moving together.</p>
+        <span class="eyebrow">Provider categories</span>
+        <h1>Find the right kind of lawn care help before you start calling.</h1>
+        <p>Describe the yard issue once, then use these categories to understand which independent local provider type may fit the request.</p>
       </div>
     </section>
+
     <section class="section section-soft">
       <div class="section-inner">
-        <div class="services-grid">
-          <article class="service-card" data-reveal><img src="assets/images/service-lawn-maintenance.webp" alt="Residential lawn mowing and edge cleanup"><div class="service-body"><h3>Lawn Maintenance</h3><p>Weekly or biweekly mowing, trimming, edging, and clean finish work.</p><a class="text-link" href="services/lawn-maintenance.html">View details</a></div></article>
-          <article class="service-card" data-reveal><img src="assets/images/service-landscape-installation.webp" alt="Landscape bed installation with shrubs and mulch"><div class="service-body"><h3>Landscape Installation</h3><p>Planting, mulch, bed shaping, edging, and practical curb appeal improvements.</p><a class="text-link" href="services/landscape-installation.html">View details</a></div></article>
-          <article class="service-card" data-reveal><img src="assets/images/service-irrigation.webp" alt="Sprinkler and irrigation coverage service"><div class="service-body"><h3>Irrigation Support</h3><p>Sprinkler checks, controller adjustments, head alignment, and water coverage guidance.</p><a class="text-link" href="services/irrigation-support.html">View details</a></div></article>
-          <article class="service-card" data-reveal><img src="assets/images/service-seasonal-cleanups.webp" alt="Seasonal yard cleanup with leaves and debris"><div class="service-body"><h3>Seasonal Cleanups</h3><p>Spring and fall cleanup, debris removal, bed reset, and lawn surface clearing.</p><a class="text-link" href="services/seasonal-cleanups.html">View details</a></div></article>
-          <article class="service-card" data-reveal><img src="assets/images/service-fertilization.webp" alt="Fertilizer application on healthy grass"><div class="service-body"><h3>Fertilization & Weed Control</h3><p>Balanced lawn nutrition, weed monitoring, spot treatment, and turf health notes.</p><a class="text-link" href="services/fertilization-weed-control.html">View details</a></div></article>
-          <article class="service-card" data-reveal><img src="assets/images/service-tree-shrub-care.webp" alt="Shrub trimming and clipping cleanup"><div class="service-body"><h3>Tree & Shrub Care</h3><p>Pruning, hedge shaping, ornamental cleanup, and small plant maintenance.</p><a class="text-link" href="services/tree-shrub-care.html">View details</a></div></article>
-          <article class="service-card" data-reveal><img src="assets/images/service-sod-repair.webp" alt="Fresh sod installation for bare lawn patches"><div class="service-body"><h3>Sod Repair & Lawn Recovery</h3><p>Patch repair, sod installation, soil prep, watering guidance, and recovery planning.</p><a class="text-link" href="services/sod-repair.html">View details</a></div></article>
+        <div class="section-head" data-reveal>
+          <div>
+            <span class="eyebrow">Service map</span>
+            <h2>Requests are easier to route when the work is grouped by need.</h2>
+          </div>
+          <p>Instead of treating every task as a separate search, GreenScape Lawn Care Connect organizes common lawn and yard needs into practical provider categories.</p>
+        </div>
+        <div class="service-path-grid">
+          <article class="service-path-card" data-reveal>
+            <div class="service-3d-icon" aria-hidden="true">
+              <i data-lucide="tractor"></i>
+            </div>
+            <span>Routine</span>
+            <h3>Keep the property presentable.</h3>
+            <p>Best for recurring maintenance, clean edges, turf monitoring, and ongoing curb appeal.</p>
+          </article>
+          <article class="service-path-card" data-reveal>
+            <div class="service-3d-icon" aria-hidden="true">
+              <i data-lucide="leaf"></i>
+            </div>
+            <span>Recovery</span>
+            <h3>Reset a yard after buildup or damage.</h3>
+            <p>Best for seasonal debris, bare patches, stressed grass, and practical turf repair conversations.</p>
+          </article>
+          <article class="service-path-card" data-reveal>
+            <div class="service-3d-icon" aria-hidden="true">
+              <i data-lucide="sprout"></i>
+            </div>
+            <span>Systems</span>
+            <h3>Improve the landscape around the lawn.</h3>
+            <p>Best for planting, bed upgrades, shrub shaping, watering issues, and irrigation support.</p>
+          </article>
         </div>
       </div>
     </section>
+
     <section class="section">
+      <div class="section-inner service-category-stack">
+        <article class="service-category-block" data-reveal>
+          <div class="service-category-media">
+            <img src="assets/images/services-category-routine.webp" alt="Freshly maintained residential lawn with clean mowing stripes">
+          </div>
+          <div class="service-category-content">
+            <div class="service-category-kicker">
+              <div class="service-3d-icon" aria-hidden="true">
+                <i data-lucide="tractor"></i>
+              </div>
+              <span class="eyebrow">Routine lawn care</span>
+            </div>
+            <h2>For lawns that need consistent upkeep.</h2>
+            <p>Use this category when the property mainly needs presentation, recurring maintenance, cleaner edges, or help staying ahead of seasonal growth.</p>
+            <div class="service-topic-list">
+              <a href="services/lawn-maintenance.html">
+                <strong>Lawn Maintenance</strong>
+                <span>Mowing, edging, trimming, blowing, visit frequency, and general yard presentation.</span>
+              </a>
+              <a href="services/fertilization-weed-control.html">
+                <strong>Fertilization & Weed Control</strong>
+                <span>Turf nutrition, weed pressure, spot concerns, seasonal treatment conversations, and lawn health notes.</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-category-block service-category-reverse" data-reveal>
+          <div class="service-category-media">
+            <img src="assets/images/services-category-recovery.webp" alt="Seasonal cleanup and lawn recovery work in a residential yard">
+          </div>
+          <div class="service-category-content">
+            <div class="service-category-kicker">
+              <div class="service-3d-icon" aria-hidden="true">
+                <i data-lucide="leaf"></i>
+              </div>
+              <span class="eyebrow">Cleanup & recovery</span>
+            </div>
+            <h2>For yards that need a reset, repair, or seasonal clearing.</h2>
+            <p>This category fits one-time cleanup needs, neglected areas, storm or leaf debris, visible turf damage, and bare spots that need provider review.</p>
+            <div class="service-topic-list">
+              <a href="services/seasonal-cleanups.html">
+                <strong>Seasonal Cleanups</strong>
+                <span>Leaf removal, branch pickup, bed reset, debris clearing, haul-away discussion, and spring or fall property cleanup.</span>
+              </a>
+              <a href="services/sod-repair.html">
+                <strong>Sod Repair & Lawn Recovery</strong>
+                <span>Bare patch repair, sod installation, soil prep, watering guidance, pet or traffic damage, and recovery planning.</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-category-block" data-reveal>
+          <div class="service-category-media">
+            <img src="assets/images/services-category-landscape.webp" alt="Landscape bed, shrubs, and irrigation support near a residential walkway">
+          </div>
+          <div class="service-category-content">
+            <div class="service-category-kicker">
+              <div class="service-3d-icon" aria-hidden="true">
+                <i data-lucide="sprout"></i>
+              </div>
+              <span class="eyebrow">Landscape & systems</span>
+            </div>
+            <h2>For beds, shrubs, planting, and watering support.</h2>
+            <p>Use this category when the request goes beyond grass cutting and involves the landscape features or systems that affect the whole yard.</p>
+            <div class="service-topic-list">
+              <a href="services/landscape-installation.html">
+                <strong>Landscape Installation</strong>
+                <span>Planting, mulch, bed shaping, edging, curb appeal updates, and practical outdoor improvements.</span>
+              </a>
+              <a href="services/tree-shrub-care.html">
+                <strong>Tree & Shrub Care</strong>
+                <span>Hedge shaping, shrub cleanup, pruning conversations, ornamental plant care, and overgrowth control.</span>
+              </a>
+              <a href="services/irrigation-support.html">
+                <strong>Irrigation Support</strong>
+                <span>Sprinkler checks, coverage concerns, controller settings, watering gaps, and seasonal irrigation guidance.</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section dark-band">
+      <div class="section-inner">
+        <div class="section-head" data-reveal>
+          <div>
+            <span class="eyebrow">Matching details</span>
+            <h2>What helps providers understand your request quickly.</h2>
+          </div>
+          <p>Clear details do not replace a provider estimate, but they make the first conversation more useful.</p>
+        </div>
+        <div class="principle-grid">
+          <article class="principle-card" data-reveal>
+            <h3>Service type</h3>
+            <p>Note whether the need is recurring, seasonal, urgent, repair-focused, or part of a larger yard improvement.</p>
+          </article>
+          <article class="principle-card" data-reveal>
+            <h3>Property context</h3>
+            <p>Include approximate yard size, gates, slopes, pets, parking, irrigation, debris volume, and access limitations.</p>
+          </article>
+          <article class="principle-card" data-reveal>
+            <h3>Photos and timing</h3>
+            <p>Photos of the whole yard and close-up problem areas can help providers discuss scope and availability sooner.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
       <div class="section-inner two-column">
         <div data-reveal>
-          <span class="eyebrow">Bundled care</span>
-          <h2>Services can be combined into a seasonal maintenance plan.</h2>
-          <p>A healthy yard changes through the year. We can pair mowing with fertilization, add shrub pruning before growth gets heavy, schedule irrigation checks before heat stress, and place cleanup visits before leaves smother the turf.</p>
+          <span class="eyebrow">One request</span>
+          <h2>Multiple needs can be included in one provider request.</h2>
+          <p>A healthy yard changes through the year. Tell us whether you need mowing, fertilization, shrub pruning, irrigation support, cleanup, or repair work, and we will help route the request toward relevant local provider categories.</p>
+          <p>GreenScape Lawn Care Connect is not the company performing the work. Homeowners choose who to hire and should confirm license, insurance, scope, schedule, and price directly with any provider.</p>
         </div>
-        <div class="image-frame" data-reveal="down"><img src="assets/images/section-yard-assessment.webp" alt="Detailed yard assessment before lawn care planning"></div>
+        <div class="verify-panel" data-reveal="down">
+          <ul class="check-list">
+            <li>Choose the closest category, then add all related needs</li>
+            <li>Share photos, timing, and access notes when possible</li>
+            <li>Ask providers what is included and what may cost extra</li>
+            <li>Confirm required license and insurance before work begins</li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>
-  <footer class="site-footer"><div class="footer-inner"><div><h3 data-company></h3><p data-footer-text></p><p data-company-line></p></div><div><h4>Services</h4><nav class="footer-links"><a href="services/lawn-maintenance.html">Lawn Maintenance</a><a href="services/landscape-installation.html">Landscape Installation</a><a href="services/irrigation-support.html">Irrigation Support</a></nav></div><div><h4>Policies</h4><nav class="footer-links"><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms & Conditions</a><a href="cookie-policy.html">Cookie Policy</a></nav></div><div><h4>Contact</h4><p><a data-phone-href data-phone></a></p><p><a data-email-href data-email></a></p><p data-address></p></div></div><div class="footer-bottom"><div class="footer-inner"><span data-copyright></span><span><a href="contact.html">Request Quote</a></span></div></div></footer>
+  <footer class="site-footer"><div class="footer-inner"><div><h3 data-company></h3><p data-footer-text></p><p data-company-line></p></div><div><h4>Services</h4><nav class="footer-links"><a href="services/lawn-maintenance.html">Lawn Maintenance</a><a href="services/landscape-installation.html">Landscape Installation</a><a href="services/irrigation-support.html">Irrigation Support</a></nav></div><div><h4>Policies</h4><nav class="footer-links"><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms & Conditions</a><a href="cookie-policy.html">Cookie Policy</a></nav></div><div><h4>Contact</h4><p><a data-phone-href data-phone></a></p><p><a data-email-href data-email></a></p><p data-address></p></div></div><div class="footer-disclaimer"><p data-disclaimer>Disclaimer: This site is a free service to assist homeowners in connecting with local service providers. All contractors/providers are independent and this site does not warrant or guarantee any work performed. It is the responsibility of the homeowner to verify that the hired contractor furnishes the necessary license and insurance required for the work being performed. All persons depicted in a photo or video are actors or models and not contractors listed on this site.</p></div><div class="footer-bottom"><div class="footer-inner"><span data-copyright></span><span><a href="contact.html">Request Quote</a></span></div></div></footer>
 </body>
 </html>
